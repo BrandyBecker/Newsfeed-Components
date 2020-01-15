@@ -3,7 +3,7 @@
 const data = [
   {
     title: 'Lambda School Students: "We\'re the best!"',
-    date: 'Nov 5th, 2018',
+    date: "Nov 5th, 2018",
     firstParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
         moff wicket tatooine luke.Solo wampa wampa calrissian yoda moff.Darth grievous darth gonk darth hutt.Darth baba skywalker
         watto fett jango maul han.Mon ewok sidious sidious lando kenobi grievous gamorrean solo.Yoda wedge utapau darth calamari.
@@ -23,8 +23,8 @@ const data = [
         moff calamari mon obi-wan. Solo grievous lando coruscant. Jinn darth palpatine obi-wan mon.`
   },
   {
-    title: 'Javascript and You, ES6',
-    date: 'May 7th, 2019',
+    title: "Javascript and You, ES6",
+    date: "May 7th, 2019",
     firstParagraph: `Alohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur portkey ghost
         Hermione spell bezoar Scabbers. Peruvian-Night-Powder werewolf, Dobby pear-tickle half-moon-glasses, Knight-Bus. Padfoot
         snargaluff seeker: Hagrid broomstick mischief managed. Snitch Fluffy rock-cake, 9 ¾ dress robes I must not tell lies. Mudbloods
@@ -43,8 +43,8 @@ const data = [
         sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.`
   },
   {
-    title: 'React vs Angular vs Vue',
-    date: 'June 7th, 2019',
+    title: "React vs Angular vs Vue",
+    date: "June 7th, 2019",
     firstParagraph: `Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ivysaur Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Venusaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charmander Lorem ipsum dolor sit amet, consectetur
         adipiscing elit. Charmeleon Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charizard Lorem ipsum dolor sit amet,
@@ -71,8 +71,8 @@ const data = [
         Castform Lotad the power that's inside Burnt Berry Makuhita. Ghost Ariados Corphish Dusclops Golbat Gligar Zweilous.`
   },
   {
-    title: 'Professional Software Development in 2019',
-    date: 'Jan 1st, 2019',
+    title: "Professional Software Development in 2019",
+    date: "Jan 1st, 2019",
     firstParagraph: `Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
           hodor. Hodor, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
           Hodor hodor hodor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor? `,
@@ -85,30 +85,105 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: "This is My New Article",
+    date: "September 4th, 2019",
+    firstParagraph: `Put toy mouse in food bowl run out of litter box at full speed immediately regret falling into bathtub but hunt by meowing loudly at 5am next to human slave food dispenser meowing chowing and wowing meow to be let in but i show my fluffy belly but it's a trap! if you pet it i will tear up your hand. Munch on tasty moths the dog smells bad. `,
+
+    secondParagraph: `Eat half my food and ask for more kitty power swat at dog, and stinky cat or jump off balcony, onto stranger's head. Attack like a vicious monster dismember a mouse and then regurgitate parts of it on the family room floor cry louder at reflection and woops poop hanging from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now. `,
+
+    thirdParagraph: `Leave fur on owners clothes dont wait for the storm to pass, dance in the rain but lay on arms while you're using the keyboard. Going to catch the red dot today going to catch the red dot today steal the warm chair right after you get up. I hate cucumber pls dont throw it at me what a cat-ass-trophy! `
   }
 ];
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
-  <div class="article">
-    <h2>{title of the article}</h2>
-    <p class="date">{date of the article}</p>
+  <div class="article"> ------------------------------[article][Class1]
+    <h2>{title of the article}</h2>-------------------[artiicleTitle]
+    <p class="date">{date of the article}</p>---------[articleDate][Class2]
 
-    {three separate paragraph elements}
+    {three separate paragraph elements}---------------[articleP1]
+------------------------------------------------------[articleP2]
+------------------------------------------------------[articleP3]
 
-    <span class='expandButton'></span>
+    <span class='expandButton'></span>----------------[articleExpandBtn][Class3]
   </div>
 
   Hint: You will need to use createElement more than once here!
 
-  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
+  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.*/
+/* Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.*/
+/* Step 3: return the entire component.*/
+/*Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.*/
+/*Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.*/
 
-  Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+const articleContainer = document.querySelector(".articles");
 
-  Step 3: return the entire component.
+data.forEach(feature => {
+  articleContainer.appendChild(
+    createArticle(
+      feature.title,
+      feature.date,
+      feature.firstParagraph,
+      feature.secondParagraph,
+      feature.thirdParagraph
+    )
+  );
+});
 
-  Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+function createArticle(
+  title,
+  date,
+  firstParagraph,
+  secondParagraph,
+  thirdParagraph
+) {
+  // creating elements
 
-  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+  const article = document.createElement("div");
+  const articleTitle = document.createElement("h2");
+  const articleDate = document.createElement("p");
+  const articleP1 = document.createElement("p");
+  const articleP2 = document.createElement("p");
+  const articleP3 = document.createElement("p");
+  const articleExpandBtn = document.createElement("span");
 
-*/
+  // structure elements
+
+  const itemsHolder = [
+    articleTitle,
+    articleDate,
+    articleP1,
+    articleP2,
+    articleP3,
+    articleExpandBtn
+  ];
+
+  function appendChildren(parent, children) {
+    children.forEach(child => {
+      parent.appendChild(child);
+    });
+  }
+
+  appendChildren(article, itemsHolder);
+
+  // set class names
+  article.classList.add("article");
+  articleDate.classList.add("date");
+  articleExpandBtn.classList.add("expandButton");
+
+  // set content
+  articleExpandBtn.textContent = "Click to Expand";
+  articleTitle.textContent = title;
+  articleDate.textContent = date;
+  articleP1.textContent = firstParagraph;
+  articleP2.textContent = secondParagraph;
+  articleP3.textContent = thirdParagraph;
+
+  // button event
+  articleExpandBtn.addEventListener("click", () => {
+    article.classList.toggle("article-open");
+  });
+  return article;
+}
